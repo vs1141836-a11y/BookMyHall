@@ -1,0 +1,332 @@
+{
+  "users": [
+    {
+      "_id": "sandbox_user_1784792377373",
+      "fullName": "Vijay",
+      "name": "Vijay",
+      "email": "vs1141836@gmail.com",
+      "passwordHash": "$2a$10$68NKFNyCW2SbNWa83yCXQeroNljWaFlRfMqldYH2A8nhEXIOEDtUq",
+      "phone": "9392446108",
+      "mobile": "9392446108",
+      "role": "customer",
+      "emailVerified": true,
+      "isVerified": true,
+      "resetPasswordToken": "40399bf68fd3fe5cd947bac3d52fb83c997c7e3b52c37b39517b247154ed8399",
+      "resetPasswordExpire": 1785128133041
+    },
+    {
+      "_id": "sandbox_user_1784865397300",
+      "fullName": "vijay kumar",
+      "name": "vijay kumar",
+      "email": "pradeepmolleti09@gmail.com",
+      "passwordHash": "$2a$10$D05tkn9SY6ZN/yD4bI9mg.YZSzGVc2ODOzj4DC.NVOgBzuErGcRka",
+      "phone": "09392446108",
+      "mobile": "09392446108",
+      "role": "customer",
+      "emailVerified": true,
+      "isVerified": true
+    },
+    {
+      "_id": "sandbox_user_1784868254754",
+      "fullName": "hbsxb",
+      "name": "hbsxb",
+      "email": "vijay@gmail.com",
+      "passwordHash": "$2a$10$Xl.blBp.7v0XsRDId7OlU.9ZrxQ56Qsk4bGzXJRfeFqMrx6xdjl4G",
+      "phone": "9392446108",
+      "mobile": "9392446108",
+      "role": "customer",
+      "emailVerified": true,
+      "isVerified": true
+    }
+  ],
+  "bookings": [
+    {
+      "_id": "sandbox_booking_1785070031273",
+      "customer": "sandbox_user_1784868254754",
+      "hall": "fb_hall_1",
+      "eventType": "Marriage",
+      "eventDate": "2026-07-26",
+      "selectedServices": [
+        {
+          "name": "Veg Basic Buffet",
+          "category": "Catering (Buffet)",
+          "price": 300,
+          "quantity": 100
+        },
+        {
+          "name": "Basic Decoration",
+          "category": "Decoration (Theme)",
+          "price": 20000,
+          "quantity": 1
+        }
+      ],
+      "baseHallPrice": 150000,
+      "servicesTotalPrice": 50000,
+      "grandTotalPrice": 247800,
+      "advanceAmount": 74340,
+      "balanceAmount": 173460,
+      "paidAmount": 74490,
+      "paymentStatus": "Partially Paid",
+      "bookingStatus": "Approved",
+      "timeline": [
+        {
+          "status": "Pending Approval",
+          "timestamp": "2026-07-26T12:47:11.273Z",
+          "description": "Booking request has been submitted."
+        },
+        {
+          "status": "Approved",
+          "timestamp": "2026-07-26T12:47:11.274Z",
+          "description": "Your booking has been approved and confirmed after successful payment."
+        }
+      ],
+      "payments": [
+        "sandbox_pay_1785070031273"
+      ],
+      "createdAt": "2026-07-26T12:47:11.274Z"
+    },
+    {
+      "_id": "sandbox_booking_1785127819180",
+      "customer": "sandbox_user_1784792377373",
+      "hall": "fb_hall_2",
+      "eventType": "Marriage",
+      "eventDate": "2026-07-27",
+      "selectedServices": [
+        {
+          "name": "Veg Premium Buffet",
+          "category": "Catering (Buffet)",
+          "price": 500,
+          "quantity": 100
+        },
+        {
+          "name": "Welcome Drinks Counter",
+          "category": "Catering (Add-on)",
+          "price": 5000,
+          "quantity": 1
+        },
+        {
+          "name": "Basic Decoration",
+          "category": "Decoration (Theme)",
+          "price": 20000,
+          "quantity": 1
+        }
+      ],
+      "baseHallPrice": 45000,
+      "servicesTotalPrice": 75000,
+      "grandTotalPrice": 153400,
+      "advanceAmount": 46020,
+      "balanceAmount": 107380,
+      "paidAmount": 153550,
+      "paymentStatus": "Fully Paid",
+      "bookingStatus": "Cancelled",
+      "timeline": [
+        {
+          "status": "Pending Approval",
+          "timestamp": "2026-07-27T04:50:19.180Z",
+          "description": "Booking request has been submitted."
+        },
+        {
+          "status": "Approved",
+          "timestamp": "2026-07-27T04:50:19.180Z",
+          "description": "Your booking has been approved and confirmed after successful payment."
+        },
+        {
+          "status": "Cancelled",
+          "timestamp": "2026-07-27T04:50:51.530Z",
+          "description": "Booking request has been cancelled by the customer."
+        }
+      ],
+      "payments": [
+        "sandbox_pay_1785127819180"
+      ],
+      "createdAt": "2026-07-27T04:50:19.180Z"
+    },
+    {
+      "_id": "sandbox_booking_1785127878533",
+      "customer": "sandbox_user_1784792377373",
+      "hall": "fb_hall_2",
+      "eventType": "Marriage",
+      "eventDate": "2026-07-27",
+      "selectedServices": [
+        {
+          "name": "Veg Basic Buffet",
+          "category": "Catering (Buffet)",
+          "price": 300,
+          "quantity": 100
+        },
+        {
+          "name": "Live Ice Cream Counter",
+          "category": "Catering (Add-on)",
+          "price": 6000,
+          "quantity": 1
+        },
+        {
+          "name": "Live Dosa/Chaat Counter",
+          "category": "Catering (Add-on)",
+          "price": 15000,
+          "quantity": 1
+        },
+        {
+          "name": "Basic Decoration",
+          "category": "Decoration (Theme)",
+          "price": 20000,
+          "quantity": 1
+        }
+      ],
+      "baseHallPrice": 45000,
+      "servicesTotalPrice": 71000,
+      "grandTotalPrice": 148680,
+      "advanceAmount": 44604,
+      "balanceAmount": 104076,
+      "paidAmount": 148830,
+      "paymentStatus": "Fully Paid",
+      "bookingStatus": "Cancelled",
+      "timeline": [
+        {
+          "status": "Pending Approval",
+          "timestamp": "2026-07-27T04:51:18.534Z",
+          "description": "Booking request has been submitted."
+        },
+        {
+          "status": "Approved",
+          "timestamp": "2026-07-27T04:51:18.534Z",
+          "description": "Your booking has been approved and confirmed after successful payment."
+        },
+        {
+          "status": "Cancelled",
+          "timestamp": "2026-07-27T04:55:31.386Z",
+          "description": "Booking request has been cancelled by the customer."
+        }
+      ],
+      "payments": [
+        "sandbox_pay_1785127878534"
+      ],
+      "createdAt": "2026-07-27T04:51:18.534Z"
+    },
+    {
+      "_id": "sandbox_booking_1785129824653",
+      "customer": "sandbox_user_1784865397300",
+      "hall": "fb_hall_4",
+      "eventType": "Marriage",
+      "eventDate": "2026-07-27",
+      "selectedServices": [
+        {
+          "name": "Veg Basic Buffet",
+          "category": "Catering (Buffet)",
+          "price": 300,
+          "quantity": 100
+        },
+        {
+          "name": "Basic Decoration",
+          "category": "Decoration (Theme)",
+          "price": 20000,
+          "quantity": 1
+        }
+      ],
+      "baseHallPrice": 30000,
+      "servicesTotalPrice": 50000,
+      "grandTotalPrice": 106200,
+      "advanceAmount": 31860,
+      "balanceAmount": 74340,
+      "paidAmount": 32010,
+      "paymentStatus": "Partially Paid",
+      "bookingStatus": "Approved",
+      "timeline": [
+        {
+          "status": "Pending Approval",
+          "timestamp": "2026-07-27T05:23:44.654Z",
+          "description": "Booking request has been submitted."
+        },
+        {
+          "status": "Approved",
+          "timestamp": "2026-07-27T05:23:44.654Z",
+          "description": "Your booking has been approved and confirmed after successful payment."
+        }
+      ],
+      "payments": [
+        "sandbox_pay_1785129824654"
+      ],
+      "createdAt": "2026-07-27T05:23:44.654Z"
+    }
+  ],
+  "payments": [
+    {
+      "_id": "sandbox_pay_1785070031273",
+      "booking": "sandbox_booking_1785070031273",
+      "customer": "sandbox_user_1784868254754",
+      "amount": 74490,
+      "paymentType": "Advance",
+      "razorpayOrderId": "rzp_order_mock_1785070031274",
+      "razorpayPaymentId": "TXN_1785070031145",
+      "status": "Success",
+      "createdAt": "2026-07-26T12:47:11.274Z"
+    },
+    {
+      "_id": "sandbox_pay_1785127819180",
+      "booking": "sandbox_booking_1785127819180",
+      "customer": "sandbox_user_1784792377373",
+      "amount": 153550,
+      "paymentType": "Full",
+      "razorpayOrderId": "rzp_order_mock_1785127819180",
+      "razorpayPaymentId": "TXN_1785127819164",
+      "status": "Success",
+      "createdAt": "2026-07-27T04:50:19.180Z"
+    },
+    {
+      "_id": "sandbox_pay_1785127878534",
+      "booking": "sandbox_booking_1785127878533",
+      "customer": "sandbox_user_1784792377373",
+      "amount": 148830,
+      "paymentType": "Full",
+      "razorpayOrderId": "rzp_order_mock_1785127878534",
+      "razorpayPaymentId": "TXN_1785127878520",
+      "status": "Success",
+      "createdAt": "2026-07-27T04:51:18.534Z"
+    },
+    {
+      "_id": "sandbox_pay_1785129824654",
+      "booking": "sandbox_booking_1785129824653",
+      "customer": "sandbox_user_1784865397300",
+      "amount": 32010,
+      "paymentType": "Advance",
+      "razorpayOrderId": "rzp_order_mock_1785129824654",
+      "razorpayPaymentId": "TXN_1785129824639",
+      "status": "Success",
+      "createdAt": "2026-07-27T05:23:44.654Z"
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "n1",
+      "title": "Welcome to BookMyHall!",
+      "message": "Explore our premium venues and book in one click.",
+      "createdAt": "2026-07-26T13:16:35.108Z",
+      "isRead": false,
+      "user": "sandbox_user_1784792377373"
+    },
+    {
+      "_id": "n2",
+      "title": "Verify Profile Details",
+      "message": "Ensure your phone number is correct for updates.",
+      "createdAt": "2026-07-26T12:16:35.108Z",
+      "isRead": false,
+      "user": "sandbox_user_1784792377373"
+    },
+    {
+      "_id": "n1",
+      "title": "Welcome to BookMyHall!",
+      "message": "Explore our premium venues and book in one click.",
+      "createdAt": "2026-07-27T05:23:16.878Z",
+      "isRead": false,
+      "user": "sandbox_user_1784865397300"
+    },
+    {
+      "_id": "n2",
+      "title": "Verify Profile Details",
+      "message": "Ensure your phone number is correct for updates.",
+      "createdAt": "2026-07-27T04:23:16.878Z",
+      "isRead": false,
+      "user": "sandbox_user_1784865397300"
+    }
+  ]
+}
