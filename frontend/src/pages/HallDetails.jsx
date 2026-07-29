@@ -25,6 +25,94 @@ const DECORATION_PACKAGES = [
   { id: 'entrance_arch', name: 'Entrance Flower Arch', description: 'Welcoming floral tunnel at the main gate using fresh jasmine, marigold, and roses.', price: 7000, image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=600', category: 'Decoration Add-on' }
 ];
 
+const VENUE_IMAGE_POOLS = [
+  [
+    'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200', // Luxury main interior
+    'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200', // Wedding stage
+    'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200', // Reception table setup
+    'https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?auto=format&fit=crop&q=80&w=1200', // Ceiling lights & chandeliers
+    'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200', // Entrance/arch floral styling
+    'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80&w=1200', // Dining area / buffet
+    'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=1200', // Bridal walkway
+    'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200', // Front elevation & parking area
+  ],
+  [
+    'https://images.unsplash.com/photo-1505232458627-a7272664a040?auto=format&fit=crop&q=80&w=1200', // Cozy party hall interior
+    'https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&q=80&w=1200', // Stage setup
+    'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80&w=1200', // Dinner party seating
+    'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=1200', // Ceiling decoration
+    'https://images.unsplash.com/photo-1520854221256-17451cc3595a?auto=format&fit=crop&q=80&w=1200', // Table settings & plates
+    'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200', // Welcome drinks / bar area
+    'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1200', // Lighting styling
+    'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1200', // Dance floor / party room
+  ],
+  [
+    'https://images.unsplash.com/photo-1507504038482-762ef9524197?auto=format&fit=crop&q=80&w=1200', // Outdoor wedding lawn
+    'https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&q=80&w=1200', // Wedding stage canopy
+    'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&q=80&w=1200', // Lawn pool views
+    'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=1200', // Dining tables on lawn
+    'https://images.unsplash.com/photo-1478812954026-9c750f0e89fc?auto=format&fit=crop&q=80&w=1200', // Garden villa entrance
+    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200', // Exterior lawn parking area
+    'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=1200', // Buffet food counter
+    'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200', // Drinks setup
+  ],
+  [
+    'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200', // Minimalist modern ballroom
+    'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80&w=1200', // Modern corporate stage
+    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200', // Stage lights & ceiling truss
+    'https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?auto=format&fit=crop&q=80&w=1200', // Ceiling lights
+    'https://images.unsplash.com/photo-1531058020387-3be344559767?auto=format&fit=crop&q=80&w=1200', // Seating layout
+    'https://images.unsplash.com/photo-1561501900-3701fa9a0c55?auto=format&fit=crop&q=80&w=1200', // Entrance elevation & parking
+    'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200', // Theatre chairs
+    'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200', // Corporate buffet area
+  ],
+  [
+    'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200', // Royal palace ballroom
+    'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200', // Traditional Indian mandap
+    'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=1200', // Ceremony seating
+    'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200', // Mandap details
+    'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&q=80&w=1200', // Royal buffet seating
+    'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=1200', // Entrance pathway
+    'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200', // Stage floral backdrop
+    'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80&w=1200', // Main dining buffet
+  ],
+  [
+    'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1200', // Theme celebration hall
+    'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=1200', // Smart LED stage
+    'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1200', // Balloon ceiling setup
+    'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200', // Welcome drinks counter
+    'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&q=80&w=1200', // Dessert bar
+    'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=1200', // Front entry arch
+    'https://images.unsplash.com/photo-1520854221256-17451cc3595a?auto=format&fit=crop&q=80&w=1200', // Chair decoration
+    'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200', // Exterior parking
+  ]
+];
+
+const getDynamicVenueImages = (hall) => {
+  if (!hall) return [];
+  if (hall.photos && hall.photos.length >= 8) {
+    return hall.photos;
+  }
+  
+  const key = hall._id || hall.name || '';
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = key.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const poolIndex = Math.abs(hash) % VENUE_IMAGE_POOLS.length;
+  const pool = VENUE_IMAGE_POOLS[poolIndex];
+  
+  const basePhotos = hall.photos && hall.photos.length > 0 ? hall.photos : [];
+  const merged = [...basePhotos];
+  
+  for (const img of pool) {
+    if (!merged.includes(img)) {
+      merged.push(img);
+    }
+  }
+  return merged;
+};
+
 export default function HallDetails() {
   const { id } = useParams();
   const { user, isAuthenticated } = useAuth();
@@ -35,6 +123,65 @@ export default function HallDetails() {
   const [bookedDates, setBookedDates] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // Curated photos list
+  const photos = getDynamicVenueImages(hall);
+
+  // Lightbox States
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [zoomScale, setZoomScale] = useState(1);
+
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setZoomScale(1);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setZoomScale(1);
+  };
+
+  const nextImage = () => {
+    setZoomScale(1);
+    setLightboxIndex((prev) => (prev + 1) % photos.length);
+  };
+
+  const prevImage = () => {
+    setZoomScale(1);
+    setLightboxIndex((prev) => (prev - 1 + photos.length) % photos.length);
+  };
+
+  const zoomIn = () => {
+    setZoomScale((prev) => Math.min(prev + 0.25, 3));
+  };
+
+  const zoomOut = () => {
+    setZoomScale((prev) => Math.max(prev - 0.25, 0.75));
+  };
+
+  const resetZoom = () => {
+    setZoomScale(1);
+  };
+
+  // Keyboard Event Listeners for Lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxOpen, photos.length]);
 
   // Customizer / Scheduling States
   const todayStr = new Date().toISOString().split('T')[0];
@@ -759,7 +906,7 @@ export default function HallDetails() {
       hallId: id,
       hallName: hall.name,
       hallLocation: `${hall.city}, ${hall.area}`,
-      hallImage: hall.photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600',
+      hallImage: photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600',
       eventType: chosenEvent?.name || 'Custom Celebration',
       eventDate: selectedDate,
       selectedServices: selectedServicesToSend,
@@ -843,29 +990,47 @@ export default function HallDetails() {
         </div>
       </div>
 
-      {/* Photo Gallery (Airbnb-style layout) */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 aspect-[21/9] overflow-hidden rounded-3xl">
-        <div className="md:col-span-2 overflow-hidden relative">
+      {/* Photo Gallery (Airbnb-style 5-image layout) */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4 aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-3xl relative group shadow-lg border border-slate-100">
+        {/* Main Hero */}
+        <div 
+          onClick={() => openLightbox(0)}
+          className="md:col-span-2 md:row-span-2 overflow-hidden relative cursor-pointer"
+        >
           <img
-            src={hall.photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200'}
+            src={photos[0]}
             alt="Venue Primary"
-            className="h-full w-full object-cover hover:scale-[1.01] transition-transform duration-300"
+            loading="lazy"
+            className="h-full w-full object-cover hover:scale-[1.02] transition-transform duration-500"
           />
+          <div className="absolute inset-0 bg-slate-950/10 hover:bg-slate-950/0 transition-colors" />
         </div>
-        <div className="hidden md:block overflow-hidden relative">
-          <img
-            src={hall.photos?.[1] || 'https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?auto=format&fit=crop&q=80&w=600'}
-            alt="Venue Secondary"
-            className="h-full w-full object-cover hover:scale-[1.01] transition-transform"
-          />
-        </div>
-        <div className="hidden md:block overflow-hidden relative">
-          <img
-            src={hall.photos?.[2] || 'https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&q=80&w=600'}
-            alt="Venue Tertiary"
-            className="h-full w-full object-cover hover:scale-[1.01] transition-transform"
-          />
-        </div>
+        {/* Grid Images */}
+        {photos.slice(1, 5).map((pic, idx) => (
+          <div 
+            key={idx}
+            onClick={() => openLightbox(idx + 1)}
+            className="hidden md:block overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src={pic}
+              alt={`Venue Detail ${idx + 1}`}
+              loading="lazy"
+              className="h-full w-full object-cover hover:scale-[1.03] transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-slate-950/10 hover:bg-slate-950/0 transition-colors" />
+          </div>
+        ))}
+        {/* Floating Show All Photos Button */}
+        <button
+          onClick={() => openLightbox(0)}
+          className="absolute bottom-4 right-4 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg flex items-center space-x-1.5 border border-slate-200 active:scale-[0.98] transition-all"
+        >
+          <svg className="h-4 w-4 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+          <span>Show all photos</span>
+        </button>
       </div>
 
       {/* Main Details & Customizer Drawer split */}
@@ -1323,6 +1488,109 @@ export default function HallDetails() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-[100] flex flex-col bg-slate-950/95 justify-between select-none animate-fade-in backdrop-blur-sm">
+          {/* Header controls */}
+          <div className="flex justify-between items-center px-6 py-4 bg-gradient-to-b from-slate-950/50 to-transparent text-white relative z-10">
+            <div className="font-bold text-sm tracking-wide text-slate-300">
+              {lightboxIndex + 1} / {photos.length}
+            </div>
+            
+            {/* Zoom and close controls */}
+            <div className="flex items-center space-x-4">
+              <button 
+                onClick={zoomOut}
+                className="p-2 hover:bg-slate-800/80 rounded-full transition-colors text-slate-300 hover:text-white"
+                title="Zoom Out"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
+                </svg>
+              </button>
+              <button 
+                onClick={zoomIn}
+                className="p-2 hover:bg-slate-800/80 rounded-full transition-colors text-slate-300 hover:text-white"
+                title="Zoom In"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </button>
+              {zoomScale !== 1 && (
+                <button 
+                  onClick={resetZoom}
+                  className="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg font-bold text-slate-200 transition-colors"
+                >
+                  Reset Zoom
+                </button>
+              )}
+              <button 
+                onClick={closeLightbox}
+                className="p-2 hover:bg-slate-800/80 rounded-full transition-colors text-slate-300 hover:text-white"
+                title="Close (Esc)"
+              >
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Main Content Area */}
+          <div className="flex-1 flex items-center justify-center relative px-4">
+            {/* Left navigation arrow */}
+            <button 
+              onClick={prevImage}
+              className="absolute left-6 z-10 p-3 bg-slate-900/60 hover:bg-slate-900/90 text-white rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg border border-slate-800"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Deployed Image with Zoom scale */}
+            <div className="max-h-[75vh] max-w-[85vw] overflow-hidden rounded-2xl flex items-center justify-center transition-transform duration-200 shadow-2xl">
+              <img
+                src={photos[lightboxIndex]}
+                alt="Fullscreen Venue Details"
+                className="object-contain max-h-[75vh] max-w-[85vw] transition-transform duration-200 ease-out"
+                style={{ transform: `scale(${zoomScale})` }}
+              />
+            </div>
+
+            {/* Right navigation arrow */}
+            <button 
+              onClick={nextImage}
+              className="absolute right-6 z-10 p-3 bg-slate-900/60 hover:bg-slate-900/90 text-white rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg border border-slate-800"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Footer thumbnails navigation */}
+          <div className="px-6 py-5 bg-gradient-to-t from-slate-950/70 to-transparent overflow-x-auto">
+            <div className="flex items-center justify-center space-x-3 min-w-max mx-auto py-1">
+              {photos.map((pic, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setZoomScale(1);
+                    setLightboxIndex(idx);
+                  }}
+                  className={`h-14 w-20 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${
+                    idx === lightboxIndex ? 'border-brand-500 scale-105 shadow-md shadow-brand-500/20' : 'border-transparent opacity-60 hover:opacity-100'
+                  }`}
+                >
+                  <img src={pic} className="h-full w-full object-cover" alt="Thumbnail" />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
