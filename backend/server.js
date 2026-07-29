@@ -57,6 +57,11 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/upload', uploadRoutes);
 
+// Root API status
+app.get('/', (req, res) => {
+  res.status(200).json({ success: true, message: 'BookMyHall API Server is running!' });
+});
+
 // Test API status
 app.get('/api/health', (req, res) => {
   res.status(200).json({ success: true, message: 'BookMyHall API is online and healthy!' });
