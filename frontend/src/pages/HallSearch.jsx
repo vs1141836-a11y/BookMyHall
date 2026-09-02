@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Search, MapPin, SlidersHorizontal, CheckSquare, Star, ArrowRightLeft, Sparkles, Map as MapIcon, Grid, AlertCircle } from 'lucide-react';
 import axios from 'axios';
+import { getPrimaryHallPhoto } from '../utils/getHallImages';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -629,8 +630,9 @@ export default function HallSearch() {
                         </div>
                       )}
                       <img
-                        src={hall.photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600'}
+                        src={getPrimaryHallPhoto(hall)}
                         alt={hall.name}
+                        loading="lazy"
                         className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>

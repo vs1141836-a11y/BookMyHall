@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Star, MapPin, Check, X, ArrowLeft, Building, Trash2 } from 'lucide-react';
 import axios from 'axios';
+import { getPrimaryHallPhoto } from '../utils/getHallImages';
 
 export default function CompareHalls() {
   const [searchParams] = useSearchParams();
@@ -312,7 +313,7 @@ export default function CompareHalls() {
             {/* Photo & Title */}
             <div className="space-y-3 cursor-pointer" onClick={() => navigate(`/halls/${hall._id}`)}>
               <div className="aspect-video rounded-2xl overflow-hidden relative">
-                <img src={hall.photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600'} alt={hall.name} className="h-full w-full object-cover" />
+                <img src={getPrimaryHallPhoto(hall)} alt={hall.name} loading="lazy" className="h-full w-full object-cover" />
               </div>
               <div>
                 <h3 className="font-bold text-slate-800 hover:text-brand-600 transition-colors line-clamp-1">{hall.name}</h3>

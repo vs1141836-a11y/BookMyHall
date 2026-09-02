@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Calendar, Users, PartyPopper, Heart, MapPin, Star, Building2, ShieldCheck, Gem, Sparkles, Cake, Baby, Home as HomeIcon, Gift, Briefcase, LogOut, Sun, Music } from 'lucide-react';
 import axios from 'axios';
+import { getPrimaryHallPhoto } from '../utils/getHallImages';
 
 export default function Home() {
   const [city, setCity] = useState('');
@@ -250,8 +251,9 @@ export default function Home() {
             >
               <div className="relative aspect-video overflow-hidden">
                 <img
-                  src={hall.photos?.[0] || 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600'}
+                  src={getPrimaryHallPhoto(hall)}
                   alt={hall.name}
+                  loading="lazy"
                   className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <span className="absolute left-3 top-3 bg-white/95 backdrop-blur-sm rounded-full py-1 px-2.5 text-[10px] font-bold text-slate-800 shadow-sm capitalize">
